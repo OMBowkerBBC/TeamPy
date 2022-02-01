@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='css/quizEnd.css') }}" rel="stylesheet"/>
+    <script src="{{ url_for('static', filename='js/quizEnd.js') }}"></script>
+    <title>Congratulations</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="greeting-wrapper">
+            <h1>Congratulations {{ player_info['name'] }}</h1>
+            <h3>You got {{ player_info.score }} out of 5!</h3>
+            <button type="button">Submit Score</button>
+        </div>
+
+        <img src="{{ url_for('static', filename='images/spinner.svg') }}" alt="Loading table spinner." class="spinner" />
+
+        <div class="custom-table">
+            <div class="table-header">
+                <h6>Name</h6>
+                <h6>Score</h6>
+            </div>
+            {% for score in scoreboard['scores'] %}
+                <div class="table-row">
+                    <span>{{ score['name'] }}</span>
+                    <span>{{ score['score'] }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
