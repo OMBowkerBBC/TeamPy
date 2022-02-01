@@ -8,9 +8,13 @@ app = Flask(__name__)
 def hello_world():
     return "<p>Hello, World!</p>"
 
-@app.route("/quizStart", methods=["GET"])
+# @app.route("/quizStarting", methods=["GET"])
+# def quiz_start():
+#     return render_template("quizStart.html")
+
+@app.route("/quizStartV2", methods=["GET"])
 def quiz_start():
-    return render_template("quizStart.html")
+    return render_template("quizStartNEW.html")
 
 @app.route("/startquiz", methods=["GET"])
 def start_quiz():
