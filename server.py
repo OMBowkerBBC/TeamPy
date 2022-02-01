@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 import sqlite3, json
 from DatbaseConnector import DatabaseConnector
+from Question import Question
 
 app = Flask(__name__)
 
@@ -11,6 +12,15 @@ def hello_world():
 @app.route("/quizStart", methods=["GET"])
 def quiz_start():
     return render_template("quizStart.html")
+
+@app.route("/category/<category>", methods=["GET"])
+def category(category):
+    with open('static/quiz folder/quiz1.json', 'r', encoding='utf-8') as file:
+        data = json.loads(file.read())['jillsquiz']
+        questions = [Question(**x) for x in data]
+        print(questions)
+
+    return render_template("quizQuestions.html", questions=questions)
 
 @app.route("/startquiz", methods=["GET"])
 def start_quiz():
