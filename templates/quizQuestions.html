@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"
+          >quiz homepage</a
+        >
+      </div>
+    </nav>
+
+    <div class="text-center">
+      <h2 class="page-section-heading text-secondary mb-0 d-inline-block">
+        History (hardcoded category)
+      </h2>
+    </div>
+
+  <!-- quiz question -->  
+    <section class="page-section portfolio" id="portfolio">
+      <div class="container">
+        <!-- Section Content-->
+        <div
+          class="row"
+          style="border-width: medium; border-color: black; border-style: solid"
+          id="0"
+        ></div>
+     </div>
+    </section>
+
+    <!-- quiz question -->  
+    <section class="page-section portfolio" id="portfolio">
+      <div class="container">
+        <!-- Section Content-->
+        <div
+          class="row"
+          style="border-width: medium; border-color: black; border-style: solid"
+          id="1"
+        ></div>
+     </div>
+    </section>
+
+    <!-- quiz question -->  
+    <section class="page-section portfolio" id="portfolio">
+      <div class="container">
+        <!-- Section Content-->
+        <div
+          class="row"
+          style="border-width: medium; border-color: black; border-style: solid"
+          id="2"
+        ></div>
+     </div>
+
+     <!-- quiz question -->  
+    <section class="page-section portfolio" id="portfolio">
+      <div class="container">
+        <!-- Section Content-->
+        <div
+          class="row"
+          style="border-width: medium; border-color: black; border-style: solid"
+          id="3"
+        ></div>
+     </div>
+
+    </section>
+
+    <script type="text/javascript" src="quiz.json"></script>
+
+    <script>
+      mydata.jillsquiz.forEach((element, index) => {
+        let ques = element.quizquestions[0].question;
+        let topic = element.topic;
+        let ans = element.quizquestions[0].correct_answer;
+        let ans1 = element.quizquestions[0].answers[0];
+        let ans2 = element.quizquestions[0].answers[1];
+        let ans3 = element.quizquestions[0].answers[2];
+
+        let mytemplate = `<div class="col-lg-12 ml-auto">
+            <p class="pre-wrap lead">Question - ${ques}</p>
+            <p class="pre-wrap lead">
+                <label for="${topic}">Choose an answer:</label>
+                <select name="${topic}" id="${topic}">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <ol>
+                    <li>${ans1}</li>
+                    <li>${ans2}</li>
+                    <li>${ans3}</li>
+                </ol>
+            </p>
+            <button onclick="check('${topic}', ${ans})">Check this answer</button>
+            <br/><br/>
+          </div>`;
+
+        document.getElementById(index.toString()).innerHTML = mytemplate;
+      });
+
+      let quizscore
+
+      function check(thistopic, correctanswer) {
+        let answervalue = document.getElementById(thistopic).value;
+        if (+answervalue == +correctanswer) {
+          alert("Correct");
+        } else {
+          alert("Not Correct");
+        }
+      }
+
+      // idk how much of this is needed
+    </script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+    <script src="assets/mail/jqBootstrapValidation.js"></script>
+    <script src="assets/mail/contact_me.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
