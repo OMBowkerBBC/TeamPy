@@ -1,6 +1,6 @@
-from os import curdir
 from flask import Flask, render_template
 import sqlite3, json
+from DatbaseConnector import DatabaseConnector
 
 app = Flask(__name__)
 
@@ -27,6 +27,18 @@ def quiz_end():
         scoreboard = json.loads(file.read())
     temporary_data = { "name": "Oli", "score": 4 }
     return render_template("quizEnd.html", player_info = temporary_data, scoreboard = scoreboard)
+
+@app.route("/test/populate", methods=["GET"])
+def populate_database():
+    dc = DatabaseConnector()
+    dc.populate()
+    return "Database Populated"
+
+@app.route("/test/reset", methods=["GET"])
+def reset_database():
+    dc = DatabaseConnector()
+    dc.reset(close=True)
+    return "Database Reset"
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=6789)
