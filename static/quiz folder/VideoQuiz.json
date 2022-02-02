@@ -1,0 +1,34 @@
+[
+    {
+        "question": "Which country has hosted the 2018 FIFA World Cup?",
+        "answers": [
+            "True",
+            "False"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Which city did the former NHL team &quot;The Nordiques&quot; originiate from?",
+        "answers": [
+            "True",
+            "False"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Which city did the former NHL team &quot;The Nordiques&quot; originiate from?",
+        "answers": [
+            "True",
+            "False"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Which city did the former NHL team &quot;The Nordiques&quot; originiate from?",
+        "answers": [
+            "True",
+            "False"
+        ],
+        "correct_answer": 1
+    }
+]
