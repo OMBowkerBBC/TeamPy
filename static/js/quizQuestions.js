@@ -6,6 +6,6 @@ const checkAnswer = (target) => {
 }
 
 window.onload = () => {
-  const userSettings = localStorage.getItem("userObject");
-  console.log(JSON.parse(userSettings).name);
-};
+  const userSettings = JSON.parse(localStorage.getItem("userObject"));
+  if (userSettings.difficulty == "Expert" && !window.location.href.includes("Expert")) window.location.href = `${window.location.href}?dif=Expert`
+}; 

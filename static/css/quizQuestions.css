@@ -69,3 +69,5 @@ header h2 {
 .question-wrapper li, label{ color:#f5f7fa; }
 
 .submit-wrapper { display: flex; width: 30%; justify-content: space-around; align-items: center; }
+
+.finish-button { margin: 10px 0; }
