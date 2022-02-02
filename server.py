@@ -35,18 +35,14 @@ def category(category):
 
     return render_template("quizQuestions.html", questions=questions, category=category, difficulty=difficulty)
 
-@app.route("/startquiz", methods=["GET"])
+@app.route("/addQuizData", methods=["GET"])
 def start_quiz():
-    with open('testQuiz.json', 'r') as file:
-        data = json.loads(file.read())
-        conn = sqlite3.connect("db.db")
-        cursor = conn.cursor()
-        cursor.execute("INSERT INTO QUIZ (CATEGORY, QUESTION_TYPE, DIFFICULTY) VALUES (?, ?, ?)", (data['category'], data['type'], data['difficulty']))
-        conn.commit()
-        cursor.close()
-        conn.close()
-
-    return "Starting Quiz"
+    category = request.args.get("cat")
+    name = request.args.get("name")
+    difficulty = request.args.get("dif")
+    dc = DatabaseConnector()
+    dc.add_quiz(category=category, name=name, difficulty=difficulty)
+    return "y"
 
 @app.route("/quizEnd", methods=["GET"])
 def quiz_end():

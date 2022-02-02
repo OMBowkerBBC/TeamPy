@@ -7,6 +7,12 @@ class DatabaseConnector:
         self.connection = sqlite3.connect("db.db")
         self.cursor = self.connection.cursor()
     
+    def add_quiz(self, name, category, difficulty):
+        print(category, difficulty)
+        self.cursor.execute("INSERT INTO QUIZ (CATEGORY, QUESTION_TYPE, DIFFICULTY) VALUES (?, ?, ?)", (category, "Multiple", difficulty))
+        self.connection.commit()
+        self.close()
+
     def populate(self):
         self.reset(close=False)
         with open("./test_files/defaultPopulateData.json", 'r') as file:
