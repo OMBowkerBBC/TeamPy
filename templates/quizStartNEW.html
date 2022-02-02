@@ -44,11 +44,11 @@
       let Uname = document.getElementById('fname');
       button.addEventListener('click', () => {
         localStorage.clear();
-        let output = JSON.stringify(
-          `{name : ${Uname.value},difficulty : ${level.value}}`
-        );
-        let JSONoutput = JSON.parse(output);
-        localStorage.setItem('userObject', JSONoutput);
+        let JSONoutput = {
+          name: Uname.value,
+          difficulty: level.value,
+        }
+        localStorage.setItem('userObject', JSON.stringify(JSONoutput));
         console.log(JSONoutput);
       });
     </script>
