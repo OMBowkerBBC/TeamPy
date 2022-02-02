@@ -10,7 +10,6 @@
     <script src="{{ url_for('static', filename='js/quizQuestions.js') }}"></script>
   </head>
 
-
   <body>
     <header>
       <a href="/quizStartV2" class="cust-button home-link">Back to Home</a>
@@ -51,4 +50,10 @@
     </div>
   {% endfor %}
   </body>
+
+  <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/quizEnd"
+          >finished quiz</a
+        >
+      </div>
 </html>
