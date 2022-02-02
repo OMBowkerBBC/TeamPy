@@ -52,8 +52,7 @@ def start_quiz():
 def quiz_end():
     with open("testScoreboard.json", 'r') as file:
         scoreboard = json.loads(file.read())
-    temporary_data = { "name": "Oli", "score": 4 }
-    return render_template("quizEnd.html", player_info = temporary_data, scoreboard = scoreboard)
+    return render_template("quizEnd.html", scoreboard = scoreboard)
 
 @app.route("/test/populate", methods=["GET"])
 def populate_database():
