@@ -7,15 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link href="css/styles.css" rel="stylesheet" />
-    <script>
-      const checkAnswer = (target) => {
-        const parent = target.parentElement;
-        const sibling = parent.getElementsByTagName("p")[1];
-        const answer = sibling.getElementsByTagName("select")[0].value;
-        const correctAnswer = target.getAttribute("data-answer");
-        answer == correctAnswer && alert("Correct");
-      }
-    </script>
+    <script src="{{ url_for('static', filename='js/quizQuestions.js') }}"></script>
   </head>
 
 
@@ -30,7 +22,7 @@
 
     <div class="text-center">
       <h2 class="page-section-heading text-secondary mb-0 d-inline-block">
-        History (hardcoded category)
+        {{ category }} ({{ difficulty }})
       </h2>
     </div>
 
@@ -52,6 +44,7 @@
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
+                <option value="4">4</option>
               </select>
               <ol>
                  {% for answer in question.answers %}
@@ -72,56 +65,7 @@
     </section>
   {% endfor %}
 
-    {% for question in questions %}
-      <span>{{ question.question }}</span>
-    {% endfor %}
 
-    <script></script>
-<!-- 
-    <script>
-      mydata.jillsquiz.forEach((element, index) => {
-        let ques = element.quizquestions[0].question;
-        let topic = element.topic;
-        let ans = element.quizquestions[0].correct_answer;
-        let ans1 = element.quizquestions[0].answers[0];
-        let ans2 = element.quizquestions[0].answers[1];
-        let ans3 = element.quizquestions[0].answers[2];
-
-        let mytemplate = `<div class="col-lg-12 ml-auto">
-            <p class="pre-wrap lead">Question - ${ques}</p>
-            <p class="pre-wrap lead">
-                <label for="${topic}">Choose an answer:</label>
-                <select name="${topic}" id="${topic}">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
-                <ol>
-                    <li>${ans1}</li>
-                    <li>${ans2}</li>
-                    <li>${ans3}</li>
-                </ol>
-            </p>
-            <button onclick="check('${topic}', ${ans})">Check this answer</button>
-            <br/><br/>
-          </div>`;
-
-        document.getElementById(index.toString()).innerHTML = mytemplate;
-      });
-
-      let quizscore
-
-      function check(thistopic, correctanswer) {
-        let answervalue = document.getElementById(thistopic).value;
-        if (+answervalue == +correctanswer) {
-          alert("Correct");
-        } else {
-          alert("Not Correct");
-        }
-      }
-
-      // idk how much of this is needed
-    </script> -->
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

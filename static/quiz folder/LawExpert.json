@@ -1,0 +1,42 @@
+[
+    {
+        "question": "Who has the power to prosecute those alleged to have committed a criminal offence?",
+        "answers": [
+            "The Crown Prosecution Service, and other agencies.",
+            "The Crown Prosecution Service, exclusively.",
+            "The Police, exclusively.",
+            "Magistrates"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "When did the use of ordinary citizens as jurors begin?",
+        "answers": [
+            "1906",
+            "1730",
+            "1585",
+            "1219"
+        ],
+        "correct_answer": 4
+    },
+    {
+        "question": "What is the supreme law-making body in the United Kingdom?",
+        "answers": [
+            "Parliament",
+            "The Civil Service",
+            "The Crown",
+            "The Church"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "All lawyers and judges who wear robes also wear a pair of white bands or tabs that hang down from the collar. What do these symbolize?",
+        "answers": [
+            "The two sides of the scales, representing justice.",
+            "Moses's two tablets of law brought down from Mount Sinai.",
+            "The powers of Parliament and monarchy.",
+            "The Church and the Crown."
+        ],
+        "correct_answer": 2
+    }
+]

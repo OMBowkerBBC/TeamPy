@@ -1,0 +1,42 @@
+[
+    {
+        "question": "The derisive acronym &quot;PIIGS&quot; refers to which of the following European countries and their economic statuses?",
+        "answers": [
+            "Portugal, Iceland, Ireland, Greece, Serbia",
+            "Portugal, Ireland, Italy, Greece, Spain",
+            "Poland, Iceland, Italy, Greece, Serbia",
+            "Poland, Iceland, Italy, Greenland, Spain"
+        ],
+        "correct_answer": 2
+    },
+    {
+        "question": "What is the only state in the United States that does not have a flag in a shape with 4 edges?",
+        "answers": [
+            "Florida",
+            "Idaho",
+            "Ohio",
+            "New Mexico"
+        ],
+        "correct_answer": 3
+    },
+    {
+        "question": "Which of the following former Yugoslavian states is landlocked?",
+        "answers": [
+            "Bosnia and Herzegovina",
+            "Croatia",
+            "Serbia",
+            "Montenegro"
+        ],
+        "correct_answer": 3
+    },
+    {
+        "question": "Which of the following Japanese islands is the biggest?",
+        "answers": [
+            "Kyushu",
+            "Honshu",
+            "Shikoku",
+            "Hokkaido"
+        ],
+        "correct_answer": 2
+    }
+]

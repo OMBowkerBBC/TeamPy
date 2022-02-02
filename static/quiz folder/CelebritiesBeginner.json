@@ -1,0 +1,42 @@
+[
+    {
+        "question": "By what name is Carlos Estevez better known? ",
+        "answers": [
+            "Charlie Sheen",
+            "Ricky Martin",
+            "Joaquin Phoenix",
+            "Bruno Mars"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Which actress married Michael Douglas in 2000?",
+        "answers": [
+            "Catherine Zeta-Jones",
+            "Sara Sugarman",
+            "Pam Ferris",
+            "Ruth Jones"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Which celebrity announced his presidency in 2015?",
+        "answers": [
+            "Donald Trump",
+            "Leonardo DiCaprio",
+            "Miley Cyrus",
+            "Kanye West"
+        ],
+        "correct_answer": 4
+    },
+    {
+        "question": "What was James Coburn&#039;s last film role before his death?",
+        "answers": [
+            "Monsters Inc",
+            "Snow Dogs",
+            "Texas Rangers",
+            "American Gun"
+        ],
+        "correct_answer": 4
+    }
+]

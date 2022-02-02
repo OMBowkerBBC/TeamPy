@@ -1,0 +1,42 @@
+[
+    {
+        "question": "How many legs is it biologically impossible for a centipede to have?",
+        "answers": [
+            "50",
+            "100",
+            "74",
+            "26"
+        ],
+        "correct_answer": 2
+    },
+    {
+        "question": "Which one of these is scientific term for 'Brain Freeze'?",
+        "answers": [
+            "Amaranthus Retroflexus",
+            "Sphenopalatine Ganglioneuralgia",
+            "Amblyomma Americanum",
+            "Hyacinthoides Italica"
+        ],
+        "correct_answer": 2
+    },
+    {
+        "question": "The core of the Sun can reach which temperature?",
+        "answers": [
+            "938,000&deg; F (521093.3 C)",
+            "8&deg; Billion F (4.4 Billion C)",
+            "Absolute Zero (Both F and C)",
+            "27&deg; Million F (15 Million C)"
+        ],
+        "correct_answer": 4
+    },
+    {
+        "question": "What is the most potent toxin known?",
+        "answers": [
+            "Ricin",
+            "Asbestos",
+            "Botulinum toxin",
+            "Cyanide"
+        ],
+        "correct_answer": 3
+    }
+]

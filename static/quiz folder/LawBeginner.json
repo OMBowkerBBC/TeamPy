@@ -1,0 +1,42 @@
+[
+    {
+        "question": "If caught, what fish must you by law offer to the Queen?",
+        "answers": [
+            "Sturgeon",
+            "Salmon",
+            "Swordfish",
+            "Shark"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Handling this fish suspiciously will land you in the slammer. Which one is it?",
+        "answers": [
+            "Tuna",
+            "Cod",
+            "Salmon",
+            "Pike"
+        ],
+        "correct_answer": 3
+    },
+    {
+        "question": "In what year was it made illegal to import Polish potatoes to England?",
+        "answers": [
+            "1804",
+            "1904",
+            "1974",
+            "2004"
+        ],
+        "correct_answer": 4
+    },
+    {
+        "question": "What can’t be worn in the Houses of Parliament?",
+        "answers": [
+            "Berets",
+            "Suits of Armor",
+            "Morph Suits",
+            "Party Hats"
+        ],
+        "correct_answer": 2
+    }
+]

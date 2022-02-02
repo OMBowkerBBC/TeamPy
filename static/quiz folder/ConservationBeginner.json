@@ -1,0 +1,42 @@
+[
+    {
+        "question": "What is the standard SI unit for temperature?",
+        "answers": [
+            "Kelvin",
+            "Celsius",
+            "Fahrenheit",
+            "Rankine"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Which element has the highest melting point?",
+        "answers": [
+            "Osmium",
+            "Carbon",
+            "Tungsten",
+            "Platinum"
+        ],
+        "correct_answer": 2
+    },
+    {
+        "question": "Which noble gas has the lowest atomic number?",
+        "answers": [
+            "Krypton",
+            "Argon",
+            "Neon",
+            "Helium"
+        ],
+        "correct_answer": 4
+    },
+    {
+        "question": "Which of these Elements is a metalloid?",
+        "answers": [
+            "Rubidium",
+            "Bromine",
+            "Tin",
+            "Antimony"
+        ],
+        "correct_answer": 4
+    }
+]

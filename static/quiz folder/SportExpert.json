@@ -1,0 +1,42 @@
+[
+    {
+        "question": "Which male player won the gold medal of table tennis singles in 2016 Olympics Games?",
+        "answers": [
+            "Ma Long (China)",
+            "Zhang Jike (China)",
+            "Jun Mizutani (Japan)",
+            "Vladimir Samsonov (Belarus)"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Which city features all of their professional sports teams&#039; jersey&#039;s with the same color scheme?",
+        "answers": [
+            "Tampa Bay",
+            "Pittsburgh",
+            "Seattle",
+            "New York"
+        ],
+        "correct_answer": 2
+    },
+    {
+        "question": "Which of these Russian cities did NOT contain a stadium that was used in the 2018 FIFA World Cup?",
+        "answers": [
+            "Vladivostok",
+            "Yekaterinburg",
+            "Rostov-on-Don",
+            "Kaliningrad"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "The AHL affiliate team of the Boston Bruins is named what?",
+        "answers": [
+            "Hartford Bruins",
+            "New Haven Bruins",
+            "Cambridge Bruins",
+            "Providence Bruins"
+        ],
+        "correct_answer": 4
+    }
+]
