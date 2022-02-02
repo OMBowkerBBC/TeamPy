@@ -12,6 +12,10 @@ VALID_DIFFICULTIES = ['Beginner', 'Expert']
 def hello_world():
     return render_template("quizStartNEW.html")
 
+@app.route("/video", methods=["GET"])
+def video_category():
+    return render_template("videoQuiz.html")
+
 @app.route("/category/<category>", methods=["GET"])
 def category(category):
     if not category in VALID_CATEGORIES:
