@@ -38,9 +38,10 @@
     </select>
     <button type="button" id="enter">enter</button>
     <script>
+      localStorage.clear();
       let button = document.getElementById('enter');
       let level = document.getElementById('difficulty');
-      let Uname = fname;
+      let Uname = document.getElementById('fname');
       let output = JSON.stringify(`{name : ${Uname.value},difficulty : ${level.value}}`);
       let JSONoutput = JSON.parse(output)
       button.addEventListener('click', () => {
