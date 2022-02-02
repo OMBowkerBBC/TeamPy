@@ -1,6 +1,18 @@
 let score = 0;
 let test;
 
+const sendDataToServer = () => {
+  const localStorageData = localStorage.getItem("userObject");
+  if (localStorageData == null) return;
+
+  const parsedData = JSON.parse(localStorageData);
+  const category = `${window.location.href.split("/")[4]}`
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', `http://localhost:6789/addQuizData?name=${parsedData.name}&dif=${parsedData.difficulty}&cat=${category}`, true);
+  xhr.send(); 
+}
+
 const checkAnswer = (target) => {
     const parent = target.parentElement;
     const parentParent = parent.parentElement;
@@ -49,4 +61,6 @@ window.onload = () => {
   const finishQuizButton = document.getElementById("finish-quiz-button");
   test = finishQuizButton;
   finishQuizButton.addEventListener("click", () => finishQuiz())
+
+  sendDataToServer();
 }; 
