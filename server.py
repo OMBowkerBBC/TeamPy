@@ -14,7 +14,11 @@ def hello_world():
 
 @app.route("/video", methods=["GET"])
 def video_category():
-    return render_template("videoQuiz.html")
+    with open(f'static/quiz folder/VideoQuiz.json', 'r', encoding='utf-8') as file:
+        data = json.loads(file.read())
+        questions = [Question(**x) for x in data]
+
+    return render_template("videoQuiz.html", questions=questions)
 
 @app.route("/category/<category>", methods=["GET"])
 def category(category):

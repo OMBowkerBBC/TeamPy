@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="{{ url_for('static', filename='css/quizQuestions.css') }}" rel="stylesheet" />
+    <script src="{{ url_for('static', filename='js/videoQuiz.js') }}"></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="/" class="cust-button home-link">Back to Home</a>
+      <h2>
+        Video Questions
+      </h2>
+    </header>
+
+    <<iframe width="560" height="315" src="https://www.youtube.com/embed/YhKq0kNcP3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <!-- quiz question -->  
+  {% for question in questions %}
+    <div class="question-wrapper">
+      <p class="question-title">Question - {{ question.question }}</p>
+      <p>
+          <ol class="answers">
+              {% for answer in question.answers %}
+                <li>{{ answer }}</li>
+              {% endfor %}
+          </ol>
+      </p>
+
+      <div class="submit-wrapper">
+        <label>Choose an answer:</label>
+        <select>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <button
+          class="cust-button submit-answer-button"
+          data-answer="{{ question.correct_answer }}" 
+        >
+          Check
+        </button>
+      </div>
+      <br/><br/>
+    </div>
+  {% endfor %}
+  </body>
+
+  <div class="finish-button">
+    <button id="finish-quiz-button" type="button" class="cust-button" data-link="/quizEnd">
+      Finish Quiz
+    </button>
+  </div>
+</html>

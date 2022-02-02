@@ -10,7 +10,7 @@
         "correct_answer": 4
     },
     {
-        "question": "Which city did the former NHL team &quot;The Nordiques&quot; originiate from?",
+        "question": "Which city did the former NHL team 'The Nordiques' originiate from?",
         "answers": [
             "Houston",
             "Montreal",
@@ -20,7 +20,7 @@
         "correct_answer": 4
     },
     {
-        "question": "This Canadian television sportscaster is known for his &quot;Hockey Night in Canada&quot; role, a commentary show during hockey games.",
+        "question": "This Canadian television sportscaster is known for his 'Hockey Night in Canada' role, a commentary show during hockey games.",
         "answers": [
             "Don McKellar",
             "Don Cherry",
@@ -30,7 +30,7 @@
         "correct_answer": 2
     },
     {
-        "question": "Which year did Jenson Button won his first ever Formula One World Drivers&#039; Championship?",
+        "question": "Which year did Jenson Button won his first ever Formula One World Drivers' Championship?",
         "answers": [
             "2006",
             "2009",
