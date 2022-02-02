@@ -10,14 +10,6 @@ VALID_DIFFICULTIES = ['Beginner', 'Expert']
 
 @app.route("/", methods=["GET"])
 def hello_world():
-    return "<p>Hello, World!</p>"
-
-# @app.route("/quizStarting", methods=["GET"])
-# def quiz_start():
-#     return render_template("quizStart.html")
-
-@app.route("/quizStartV2", methods=["GET"])
-def quiz_start():
     return render_template("quizStartNEW.html")
 
 @app.route("/category/<category>", methods=["GET"])

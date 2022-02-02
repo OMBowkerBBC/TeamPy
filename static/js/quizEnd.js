@@ -9,12 +9,12 @@ const saveScoreToServer = () => {
     spinner.style.opacity = 1;
     submitScoreButton.innerText = "Back to Home";
     submitScoreButton.removeEventListener("click", saveScoreToServer);
-    submitScoreButton.addEventListener("click", () => window.location.href = `${window.location.href.split("/")[0]}/quizStartV2`);
+    submitScoreButton.addEventListener("click", () => window.location.href = `${window.location.href.split("/")[0]}/`);
 };
 
 const getUsersName = () => {
     const localStorageData = localStorage.getItem("userObject");
-    let name = "Name Pending...";
+    let name = "";
     if (localStorageData !== null) name = JSON.parse(localStorageData).name;
     document.querySelector(".greeting-wrapper").querySelector("h1").innerText = `Congratulations ${name}`;
 };
