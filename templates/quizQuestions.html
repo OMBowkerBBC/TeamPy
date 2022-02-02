@@ -7,6 +7,15 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link href="css/styles.css" rel="stylesheet" />
+    <script>
+      const checkAnswer = (target) => {
+        const parent = target.parentElement;
+        const sibling = parent.getElementsByTagName("p")[1];
+        const answer = sibling.getElementsByTagName("select")[0].value;
+        const correctAnswer = target.getAttribute("data-answer");
+        answer == correctAnswer && alert("Correct");
+      }
+    </script>
   </head>
 
 
@@ -26,6 +35,7 @@
     </div>
 
   <!-- quiz question -->  
+  {% for question in questions %}
     <section class="page-section portfolio" id="portfolio">
       <div class="container">
         <!-- Section Content-->
@@ -33,48 +43,41 @@
           class="row"
           style="border-width: medium; border-color: black; border-style: solid"
           id="0"
-        ></div>
+        >
+        <div class="col-lg-12 ml-auto">
+          <p class="pre-wrap lead">Question - {{ question.question }}</p>
+          <p class="pre-wrap lead">
+              <label>Choose an answer:</label>
+              <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <ol>
+                 {% for answer in question.answers %}
+                    <li>{{ answer }}</li>
+                 {% endfor %}
+              </ol>
+          </p>
+          <button
+            data-answer="{{ question.correct_answer }}" 
+            onclick="checkAnswer(this)"
+          >
+            Check this answer
+          </button>
+          <br/><br/>
+        </div>
+      </div>
      </div>
     </section>
+  {% endfor %}
 
-    <!-- quiz question -->  
-    <section class="page-section portfolio" id="portfolio">
-      <div class="container">
-        <!-- Section Content-->
-        <div
-          class="row"
-          style="border-width: medium; border-color: black; border-style: solid"
-          id="1"
-        ></div>
-     </div>
-    </section>
+    {% for question in questions %}
+      <span>{{ question.question }}</span>
+    {% endfor %}
 
-    <!-- quiz question -->  
-    <section class="page-section portfolio" id="portfolio">
-      <div class="container">
-        <!-- Section Content-->
-        <div
-          class="row"
-          style="border-width: medium; border-color: black; border-style: solid"
-          id="2"
-        ></div>
-     </div>
-
-     <!-- quiz question -->  
-    <section class="page-section portfolio" id="portfolio">
-      <div class="container">
-        <!-- Section Content-->
-        <div
-          class="row"
-          style="border-width: medium; border-color: black; border-style: solid"
-          id="3"
-        ></div>
-     </div>
-
-    </section>
-
-    <script type="text/javascript" src="../static/quiz folder/quiz1.json"></script>
-
+    <script></script>
+<!-- 
     <script>
       mydata.jillsquiz.forEach((element, index) => {
         let ques = element.quizquestions[0].question;
@@ -118,7 +121,7 @@
       }
 
       // idk how much of this is needed
-    </script>
+    </script> -->
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
