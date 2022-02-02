@@ -1,9 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import sqlite3, json
 from DatbaseConnector import DatabaseConnector
 from Question import Question
 
 app = Flask(__name__)
+
+VALID_CATEGORIES = ['History', 'Geography', 'Politics', 'Conservation', 'Celebrities', 'Law', 'Sport']
+VALID_DIFFICULTIES = ['Beginner', 'Expert']
 
 @app.route("/", methods=["GET"])
 def hello_world():
@@ -19,12 +22,18 @@ def quiz_start():
 
 @app.route("/category/<category>", methods=["GET"])
 def category(category):
-    with open('static/quiz folder/quiz1.json', 'r', encoding='utf-8') as file:
-        data = json.loads(file.read())['jillsquiz']
-        questions = [Question(**x) for x in data]
-        print(questions)
+    if not category in VALID_CATEGORIES:
+        return "Invalid Category"
+    
+    difficulty = request.args.get("dif")
+    if not difficulty or not difficulty in VALID_DIFFICULTIES:
+        difficulty = "Beginner"
 
-    return render_template("quizQuestions.html", questions=questions)
+    with open(f'static/quiz folder/{category}{difficulty}.json', 'r', encoding='utf-8') as file:
+        data = json.loads(file.read())
+        questions = [Question(**x) for x in data]
+
+    return render_template("quizQuestions.html", questions=questions, category=category, difficulty=difficulty)
 
 @app.route("/startquiz", methods=["GET"])
 def start_quiz():

@@ -1,0 +1,42 @@
+[
+    {
+        "question": "The Hunua Ranges is located in...",
+        "answers": [
+            "Mexico",
+            "China",
+            "Nepal",
+            "New Zealand"
+        ],
+        "correct_answer": 4
+    },
+    {
+        "question": "What is Canada&#039;s largest island?",
+        "answers": [
+            "Newfoundland",
+            "Baffin Island",
+            "Prince Edward Island",
+            "Vancouver Island"
+        ],
+        "correct_answer": 2
+    },
+    {
+        "question": "The emblem on the flag of the Republic of Tajikistan features a sunrise over mountains below what symbol?",
+        "answers": [
+            "Sickle",
+            "Bird",
+            "Crown",
+            "Tree"
+        ],
+        "correct_answer": 3
+    },
+    {
+        "question": "What is the largest freshwater lake by volume?",
+        "answers": [
+            "Lake Baikal",
+            "Lake Superior",
+            "Lake Michigan",
+            "Lake Huron"
+        ],
+        "correct_answer": 1
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "question": "Which country has hosted the 2018 FIFA World Cup?",
+        "answers": [
+            "United States",
+            "Saudi Arabia",
+            "Germany",
+            "Russia"
+        ],
+        "correct_answer": 4
+    },
+    {
+        "question": "Which city did the former NHL team &quot;The Nordiques&quot; originiate from?",
+        "answers": [
+            "Houston",
+            "Montreal",
+            "New York",
+            "Quebec City"
+        ],
+        "correct_answer": 4
+    },
+    {
+        "question": "This Canadian television sportscaster is known for his &quot;Hockey Night in Canada&quot; role, a commentary show during hockey games.",
+        "answers": [
+            "Don McKellar",
+            "Don Cherry",
+            "Don Taylor ",
+            "Donald Sutherland"
+        ],
+        "correct_answer": 2
+    },
+    {
+        "question": "Which year did Jenson Button won his first ever Formula One World Drivers&#039; Championship?",
+        "answers": [
+            "2006",
+            "2009",
+            "2007",
+            "2010"
+        ],
+        "correct_answer": 2
+    }
+]

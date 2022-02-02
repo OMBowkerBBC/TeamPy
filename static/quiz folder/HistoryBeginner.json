@@ -1,0 +1,42 @@
+[
+    {
+        "question": "Who discovered Penicillin?",
+        "answers": [
+            "Alexander Flemming",
+            "Marie Curie",
+            "Louis Pasteur",
+            "Alfred Nobel"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Who was the first president of the United States?",
+        "answers": [
+            "James K. Polk",
+            "James Madison",
+            "Thomas Jefferson",
+            "George Washington"
+        ],
+        "correct_answer": 4
+    },
+    {
+        "question": "The &quot;Trail of Tears&quot; was a result of which United States President&#039;s Indian Removal Policy?",
+        "answers": [
+            "John Quincy Adams",
+            "Andrew Jackson",
+            "Martin Van Buren",
+            "Harry S. Truman"
+        ],
+        "correct_answer": 2
+    },
+    {
+        "question": "Abolitionist John Brown raided the arsenal in which Virginia Town?",
+        "answers": [
+            "Martinsburg",
+            "Harrisonburg",
+            "Harper's Ferry",
+            "Richmond"
+        ],
+        "correct_answer": 3
+    }
+]

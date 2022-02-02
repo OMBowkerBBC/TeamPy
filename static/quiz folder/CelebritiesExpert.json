@@ -1,0 +1,42 @@
+[
+    {
+        "question": "How tall is Tom Cruise?",
+        "answers": [
+            "5 foot 7",
+            "5 foot 9",
+            "5 foot 4",
+            "5 foot 5"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "The eccentric natural philosopher Tycho Brahe kept what as a pet?",
+        "answers": [
+            "Moose",
+            "Goat",
+            "Dog",
+            "Bear"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Gabe Newell was born in which year?",
+        "answers": [
+            "1962 ",
+            "1970",
+            "1972",
+            "1960"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Billy Herrington is from which US state?",
+        "answers": [
+            "Georgia",
+            "California",
+            "New York",
+            "Arizona"
+        ],
+        "correct_answer": 3
+    }
+]

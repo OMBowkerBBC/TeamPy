@@ -1,0 +1,42 @@
+[
+    {
+        "question": "The largest consumer market in 2015 was...",
+        "answers": [
+            "The United States of America",
+            "United Kingdom",
+            "Japan",
+            "Germany"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "How many people are in the U.S. House of Representatives?",
+        "answers": [
+            "260",
+            "50",
+            "415",
+            "435"
+        ],
+        "correct_answer": 4
+    },
+    {
+        "question": "According to the United States Constitution, how old must a person be to be elected President of the United States?",
+        "answers": [
+            "30",
+            "35",
+            "45",
+            "40"
+        ],
+        "correct_answer": 2
+    },
+    {
+        "question": "Who was the 45th President of the United States?",
+        "answers": [
+            "Barack Obama",
+            "Bill Clinton",
+            "Donald Trump",
+            "George Bush"
+        ],
+        "correct_answer": 3
+    }
+]

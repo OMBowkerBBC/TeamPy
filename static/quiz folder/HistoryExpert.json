@@ -1,0 +1,42 @@
+[
+    {
+        "question": "What year was Canada founded in?",
+        "answers": [
+            "1867",
+            "1859",
+            "1668",
+            "1798"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "When was the city of Rome, Italy founded?",
+        "answers": [
+            "753 BCE",
+            "902 BCE",
+            "697 BCE",
+            "524 BCE"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "What was the original name of New York City?",
+        "answers": [
+            "New Amsterdam",
+            "New Paris",
+            "New Rome",
+            "New London"
+        ],
+        "correct_answer": 1
+    },
+    {
+        "question": "Which of the following Physicists aided Nazi Germany in their production of a nuclear weapon?",
+        "answers": [
+            "Max Planck",
+            "Werner Heisenberg",
+            "John von Neumann",
+            "Albert Einstein"
+        ],
+        "correct_answer": 2
+    }
+]

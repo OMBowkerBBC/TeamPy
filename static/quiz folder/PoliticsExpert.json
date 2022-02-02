@@ -1,0 +1,42 @@
+[
+    {
+        "question": "Which Native American tribe/nation requires at least one half blood quantum (equivalent to one parent) to be eligible for membership?",
+        "answers": [
+            "Kiowa Tribe of Oklahoma",
+            "Pawnee Nation of Oklahoma",
+            "Standing Rock Sioux Tribe",
+            "Yomba Shoshone Tribe"
+        ],
+        "correct_answer": 4
+    },
+    {
+        "question": "Which letter do you need to have on a European driver license in order to ride any motorbikes?",
+        "answers": [
+            "D",
+            "A",
+            "X",
+            "B"
+        ],
+        "correct_answer": 2
+    },
+    {
+        "question": "&quot;Yes, America Can!&quot; was this United States politician&#039;s de facto campaign slogan in 2004.",
+        "answers": [
+            "John Kerry",
+            "Al Gore",
+            "George W. Bush",
+            "Barack Obama"
+        ],
+        "correct_answer": 3
+    },
+    {
+        "question": "Which of the following United States senators is known for performing a 24-hour long filibuster?",
+        "answers": [
+            "Strom Thurmond",
+            "Chuck Schumer",
+            "John Barrasso",
+            "Roy Blunt"
+        ],
+        "correct_answer": 1
+    }
+]
