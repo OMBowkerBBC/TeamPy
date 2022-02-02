@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="{{ url_for('static', filename='css/quizQuestions.css') }}" rel="stylesheet" />
+    <script src="{{ url_for('static', filename='js/quizQuestions.js') }}"></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="/" class="cust-button home-link">Back to Home</a>
+      <h2>
+        {{ category }} ({{ difficulty }})
+      </h2>
+    </header>
+
+  <!-- quiz question -->  
+  {% for question in questions %}
+    <div class="question-wrapper">
+      <p class="question-title">Question - {{ question.question }}</p>
+      <p>
+          <ol>
+              {% for answer in question.answers %}
+                <li>{{ answer }}</li>
+              {% endfor %}
+          </ol>
+      </p>
+
+      <div class="submit-wrapper">
+        <label>Choose an answer:</label>
+        <select>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <button
+          class="cust-button"
+          data-answer="{{ question.correct_answer }}" 
+          onclick="checkAnswer(this)"
+        >
+          Check
+        </button>
+      </div>
+      <br/><br/>
+    </div>
+  {% endfor %}
+  </body>
+
+  <div class="finish-button">
+        <a class="cust-button" href="/quizEnd"
+          >Finish Quiz</a
+        >
+      </div>
+</html>
