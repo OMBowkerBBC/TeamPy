@@ -38,12 +38,16 @@
     </select>
     <button type="button" id="enter">enter</button>
     <script>
+      localStorage.clear();
       let button = document.getElementById('enter');
       let level = document.getElementById('difficulty');
-      let Uname = fname;
-      let output = JSON.stringify(`{name : ${Uname.value},difficulty : ${level.value}}`);
-      let JSONoutput = JSON.parse(output)
+      let Uname = document.getElementById('fname');
       button.addEventListener('click', () => {
+        localStorage.clear();
+        let output = JSON.stringify(
+          `{name : ${Uname.value},difficulty : ${level.value}}`
+        );
+        let JSONoutput = JSON.parse(output);
         localStorage.setItem('userObject', JSONoutput);
         console.log(JSONoutput);
       });
@@ -58,69 +62,67 @@
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         </div>
       </div> -->
-  
-      <a href="/category/History">
-        <img
-          class="img-fluid"
-          src="../static/images/history.jpg"
-          alt="History"
-          style="width: 200px;height: 200px;"
-        />
-      </a>
 
-      <a href="/category/Geography">
-        <img
-          class="img-fluid"
-          src="../static/images/geography.jpg"
-          alt="Geography"
-          style="width: 200px;height: 200px;"
-        />
-      </a>
+  <a href="/category/History">
+    <img
+      class="img-fluid"
+      src="../static/images/history.jpg"
+      alt="History"
+      style="width: 200px; height: 200px"
+    />
+  </a>
 
-      <a href="/category/Politics">
-        <img
-          class="img-fluid"
-          src="../static/images/politics.png"
-          alt="Politics"
-          style="width: 200px;height: 200px;"
-        />
-      </a>
+  <a href="/category/Geography">
+    <img
+      class="img-fluid"
+      src="../static/images/geography.jpg"
+      alt="Geography"
+      style="width: 200px; height: 200px"
+    />
+  </a>
 
-      <a href="/category/Conservation">
-        <img
-          class="img-fluid"
-          src="../static/images/conservation.jpg"
-          alt="Conservation"
-          style="width: 200px;height: 200px;"
-        />
-      </a>
+  <a href="/category/Politics">
+    <img
+      class="img-fluid"
+      src="../static/images/politics.png"
+      alt="Politics"
+      style="width: 200px; height: 200px"
+    />
+  </a>
 
-      <a href="/category/Celebrities">
-        <img
-          class="img-fluid"
-          src="../static/images/Celebrities.jpg"
-          alt="Celebrities"
-          style="width: 200px;height: 200px;"
-        />
-      </a>
+  <a href="/category/Conservation">
+    <img
+      class="img-fluid"
+      src="../static/images/conservation.jpg"
+      alt="Conservation"
+      style="width: 200px; height: 200px"
+    />
+  </a>
 
-      <a href="/category/Law">
-        <img
-          class="img-fluid"
-          src="../static/images/law.jpg"
-          alt="Law"
-          style="width: 200px;height: 200px;"
-        />
-      </a>
+  <a href="/category/Celebrities">
+    <img
+      class="img-fluid"
+      src="../static/images/Celebrities.jpg"
+      alt="Celebrities"
+      style="width: 200px; height: 200px"
+    />
+  </a>
 
+  <a href="/category/Law">
+    <img
+      class="img-fluid"
+      src="../static/images/law.jpg"
+      alt="Law"
+      style="width: 200px; height: 200px"
+    />
+  </a>
 
-      <a href="/category/Sport">
-        <img
-          class="img-fluid"
-          src="../static/images/sports.jpg"
-          alt="Sports"
-          style="width: 200px;height: 200px;"
-        />
-      </a>
-
-
+  <a href="/category/Sport">
+    <img
+      class="img-fluid"
+      src="../static/images/sports.jpg"
+      alt="Sports"
+      style="width: 200px; height: 200px"
+    />
+  </a>
+</html>
