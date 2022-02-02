@@ -23,7 +23,7 @@
     <div class="question-wrapper">
       <p class="question-title">Question - {{ question.question }}</p>
       <p>
-          <ol>
+          <ol class="answers">
               {% for answer in question.answers %}
                 <li>{{ answer }}</li>
               {% endfor %}
@@ -39,9 +39,8 @@
           <option value="4">4</option>
         </select>
         <button
-          class="cust-button"
+          class="cust-button submit-answer-button"
           data-answer="{{ question.correct_answer }}" 
-          onclick="checkAnswer(this)"
         >
           Check
         </button>
@@ -52,8 +51,8 @@
   </body>
 
   <div class="finish-button">
-        <a class="cust-button" href="/quizEnd"
-          >Finish Quiz</a
-        >
-      </div>
+    <button id="finish-quiz-button" type="button" class="cust-button" data-link="/quizEnd">
+      Finish Quiz
+    </button>
+  </div>
 </html>

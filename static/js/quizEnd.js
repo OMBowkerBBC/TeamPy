@@ -12,11 +12,22 @@ const saveScoreToServer = () => {
     submitScoreButton.addEventListener("click", () => window.location.href = `${window.location.href.split("/")[0]}/`);
 };
 
-const getUsersName = () => {
+const getUsersData = () => {
     const localStorageData = localStorage.getItem("userObject");
-    let name = "";
-    if (localStorageData !== null) name = JSON.parse(localStorageData).name;
-    document.querySelector(".greeting-wrapper").querySelector("h1").innerText = `Congratulations ${name}`;
+    let parsedData, name;
+    let score = "Something went Wrong!";
+
+    if (localStorageData !== null) {
+        parsedData = JSON.parse(localStorageData);
+        name = parsedData.name === undefined ? "" : parsedData.name;
+        score = parsedData.score;
+    }
+    
+    const congratsMessage = document.querySelector(".greeting-wrapper").querySelector("h1");
+    congratsMessage.innerText = `Congratulations ${name}`
+
+    const scoreMessage = document.querySelector(".greeting-wrapper").querySelector("h3");
+    scoreMessage.innerText = `You got ${score} out of 4!`;
 };
 
 window.onload = () => {
@@ -26,5 +37,5 @@ window.onload = () => {
 
     submitScoreButton.addEventListener("click", saveScoreToServer);
 
-    getUsersName();
+    getUsersData();
 }
